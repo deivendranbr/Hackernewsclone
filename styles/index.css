@@ -33,6 +33,10 @@ header {
 	text-align: center;
 }
 
+.domain, .createdat {
+	color: #828282;
+}
+
 .upvote-button {
 	background-image: url('../upvote.gif');
 	width: 10px;

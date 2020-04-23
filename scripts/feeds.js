@@ -124,6 +124,7 @@ Feeds.prototype.render = function renderFn(data) {
 				<span class="title">${feed.title}</span>
 				<span class="domain">(${domainName})</span> by
 				<span class="author">${feed.author}</span>
+				<span class="createdat"> ${findTime(feed.created_at)} <span>
 				<span>[<button aria-label="Hide button" class="hide-button">hide</button>]</span>
 			</td>
 		</tr>`
