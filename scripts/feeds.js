@@ -4,14 +4,21 @@ function Feeds(win, doc, container, url) {
 	this.url = url;
 	this.pageCount = 0;
 	this.container = container;
+
 	this.moreItemsBtn = this.doc.querySelector('.next-page');
 	this.onNextPageClickFn = this.onNextPageClick.bind(this);
+	this.onTableClickFn = this.onTableClick.bind(this);
+	this.container.addEventListener('click', this.onTableClickFn, false);
 }
 
 function getDomainName(url) {
 	let urlParts = url.replace('http://','').replace('https://','').split(/[/?#]/);
 	
 	return urlParts[0];
+}
+
+Feeds.prototype.onTableClick = function onTableClickFn(e) {
+	let targetRow = e.target.closest('tr');
 }
 
 Feeds.prototype.onNextPageClick = function clickFn(e) {
@@ -32,12 +39,12 @@ Feeds.prototype.render = function renderFn(data) {
 		let listTemplate = `<tr class="list-item">
 			<td><span class="comments">${feed.num_comments}</span><td>
 			<td><span class="points">${feed.points}</span></td>
-			<td><button class="upvote-button"></button></td>
+			<td><button aria-label="Upvote button" class="upvote-button"></button></td>
 			<td>
 				<span class="title">${feed.title}</span>
-				<span class="domain">(${domainName})</span>by
+				<span class="domain">(${domainName})</span> by
 				<span class="author">${feed.author}</span>
-				<span>[<button class="hide-button">hide</button>]</span>
+				<span>[<button aria-label="Hide button" class="hide-button">hide</button>]</span>
 			</td>
 		</tr>`
 
