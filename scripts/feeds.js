@@ -38,8 +38,6 @@ function isDataExists(array, id) {
 Feeds.prototype.saveHideData = function hideFn(id) {
 	// Check browser support
 	if (typeof(Storage) !== "undefined") {
-  		// Store
-
   		if (localStorage.getItem("hidefeed") === null) {
 	  		localStorage.setItem("hidefeed", '[]');
   		}
