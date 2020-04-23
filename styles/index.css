@@ -17,15 +17,32 @@ header {
 }
 
 .list-item:nth-child(even) {
-	background-color : #F6F6EF;
+ 	background-color : #F6F6EF;
 }
 
-.list-item {
-	padding: .3em;
+.list-item td {
+	padding: .4em .2em;
 }
 
 .feeds-container {
 	width: 100%;
+}
+
+.comments, .points {
+	display: block;
+	text-align: center;
+}
+
+.upvote-button {
+	background-image: url('../upvote.gif');
+	width: 10px;
+	height: 13px;
+	border: none;
+	outline: none; 
+}
+
+.list-item:nth-child(odd) .upvote-button {
+	background-color : #fff;
 }
 
 .next-page {
@@ -36,10 +53,14 @@ header {
 	outline: none;
 }
 
-.hide-button{
+.hide-button {
 	border: none;
 	background-color: #F6F6EF;
 	cursor: pointer;
 	outline: none;
 	font-weight: bold;
+}
+
+.list-item:nth-child(odd) .hide-button {
+	background-color: #fff;
 }

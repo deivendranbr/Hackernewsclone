@@ -32,7 +32,7 @@ Feeds.prototype.render = function renderFn(data) {
 		let listTemplate = `<tr class="list-item">
 			<td><span class="comments">${feed.num_comments}</span><td>
 			<td><span class="points">${feed.points}</span></td>
-			<td><button class="upvote-button">^</button></td>
+			<td><button class="upvote-button"></button></td>
 			<td>
 				<span class="title">${feed.title}</span>
 				<span class="domain">(${domainName})</span>by
