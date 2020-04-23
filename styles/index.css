@@ -38,7 +38,8 @@ header {
 	width: 10px;
 	height: 13px;
 	border: none;
-	outline: none; 
+	outline: none;
+	background-color : #F6F6EF; 
 }
 
 .list-item:nth-child(odd) .upvote-button {
