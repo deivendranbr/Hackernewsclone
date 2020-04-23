@@ -100,6 +100,7 @@ Feeds.prototype.onTableClick = function onTableClickFn(e) {
 	}
 }
 
+// Fetching more data by clicking more button
 Feeds.prototype.onNextPageClick = function clickFn(e) {
 	this.pageCount += 1;
 	this.load(); 
