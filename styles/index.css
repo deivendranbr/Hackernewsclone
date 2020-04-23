@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+.feeds-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color : #FF6600;
+	padding: .3em;
+}
+
+.list-item:nth-child(even) {
+	background-color : #F6F6EF;
+}
+
+.list-item {
+	padding: .3em;
+}
+
+.feeds-container {
+	width: 100%;
+}
+
+.next-page {
+	color: #FF6600;
+	border: none;
+	background-color: #fff;
+	cursor: pointer;
+	outline: none;
+}
+
+.hide-button{
+	border: none;
+	background-color: #F6F6EF;
+	cursor: pointer;
+	outline: none;
+	font-weight: bold;
+}
